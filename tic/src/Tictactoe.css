@@ -1,0 +1,354 @@
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0b0f19;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+.ttt-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b0f19;
+  padding: 18px;
+}
+
+
+.ttt-container {
+  width: 100%;
+  height: 730px;
+  max-width: 980px; /* wider to fit side-by-side */
+  background: radial-gradient(circle at top, #101828, #0b0f19 80%);
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+  color: #eaf6ff;
+
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "title title"
+    "left main"
+    "left footer";
+  gap: 18px;
+  align-items: start;
+}
+
+.ttt-title {
+  grid-area: title;
+  margin: 0 0 6px 0;
+  font-size: 28px;
+  text-align: center;
+  color: #f3fbff;
+}
+
+.settings-row {
+  grid-area: left;
+  margin-top: -30px; 
+  padding: 12px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 220px;
+}
+
+
+.player-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.player-block {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+
+.label {
+  display: block;
+  font-size: 13px;
+  color: #cfe8ff;
+  margin-bottom: 6px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: #eaf6ff;
+  outline: none;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.text-input::placeholder {
+  color: rgba(235,245,255,0.35);
+}
+
+
+.symbol-choices {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.symbol-btn {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: #eaf6ff;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.symbol-btn.active {
+  outline: 2px solid rgba(111, 211, 206, 0.18);
+  box-shadow: 0 6px 18px rgba(5,12,20,0.6);
+  background: rgba(255,255,255,0.03);
+}
+
+
+.symbol-custom {
+  width: 74px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: #eaf6ff;
+  outline: none;
+}
+
+.symbol-apply {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03);
+  color: #eaf6ff;
+  cursor: pointer;
+}
+
+
+.settings-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+
+.settings-actions .ttt-btn {
+  width: 100%;
+}
+
+
+.ttt-controls {
+  grid-area: main;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ttt-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ttt-scores {
+  display: flex;
+  gap: 8px;
+  margin-top: 0px;
+}
+
+.pill {
+  background: rgba(255,255,255,0.02);
+  padding: 6px 10px;
+  margin-top: 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.03);
+  font-weight: 600;
+  color: #cfe8ff;
+}
+
+.ttt-board-wrap {
+  grid-area: main;
+  position: relative;
+  margin: 6px auto;
+  width: 100%;
+  max-width: 420px;
+}
+
+.ttt-board {
+  display: grid;
+  margin-top: 80px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.ttt-cell {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: rgba(255,255,255,0.9); 
+  font-size: 44px;
+  font-weight: 700;
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: transform .08s ease, background .12s ease;
+  overflow: hidden;
+}
+
+.ttt-cell:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.06);
+}
+
+.ttt-win {
+  background: linear-gradient(90deg, rgba(79,195,255,0.08), rgba(79,195,255,0.03));
+  border-color: rgba(79,195,255,0.24);
+}
+
+.ttt-line-svg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ttt-line {
+  stroke: #4fc3ff;
+  stroke-width: 6;
+  stroke-linecap: round;
+  filter: drop-shadow(0 6px 14px rgba(79,195,255,0.12));
+}
+
+.ttt-footer {
+  grid-area: footer;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.ttt-status {
+  font-weight: 700;
+  color: #d6e9ff;
+}
+
+.winner-overlay {
+  position: fixed;
+  inset: 0;
+  
+  margin-block-start: 40px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(2.4px) saturate(120%);
+  z-index: 30;
+}
+
+.winner-card {
+  width: 92%;
+  max-width: 420px;
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+
+.rules-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(2.4px);
+  z-index: 40;
+}
+
+.ttt-btn {
+margin-left: 10px;
+}
+
+.rules-card {
+  width: 92%;
+  max-width: 420px;
+  color: aliceblue;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+@media (max-width: 920px) {
+  .ttt-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "title"
+      "left"
+      "main"
+      "footer";
+    max-width: 520px;
+    padding: 16px;
+  }
+
+  .settings-row {
+    min-height: auto;
+  }
+
+  .ttt-board-wrap {
+    max-width: 420px;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ttt-board { gap: 8px; }
+  .ttt-cell { font-size: 34px; }
+  .ttt-container { padding: 12px; }
+  .symbol-custom { width: 60px; }
+}
