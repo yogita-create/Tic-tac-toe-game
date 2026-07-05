@@ -33,7 +33,7 @@ html, body, #root {
   padding: 20px;
   margin: 0 auto;
   border-radius: 20px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+  box-shadow: 0 10px 35px rgba(68, 38, 38, 0.45);
   color: #eaf6ff;
 
   display: grid;
@@ -58,7 +58,7 @@ html, body, #root {
 .settings-row {
   grid-area: left;
   margin-top: -30px; 
-  padding: 12px;
+  padding: 10px;
   background: rgba(255,255,255,0.02);
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.04);
