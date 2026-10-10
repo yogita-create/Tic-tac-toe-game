@@ -1,6 +1,6 @@
 # 🎮 Tic Tac Toe — Emoji Edition
 
-A fun and interactive **two-player Tic Tac Toe** game built with **React + HTML + CSS**, where players don't just play with X and O — they play with **emojis of their choice**!
+A fun and interactive **two-player Tic Tac Toe** game built with **React + HTML + CSS**, where players don't just play with X and O — they play with **emojis of their choice like 🥰😎😊😍**!
 
 ---
 
