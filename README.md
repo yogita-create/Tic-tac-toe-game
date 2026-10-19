@@ -49,10 +49,7 @@ npm install
 # Start the development server
 npm run dev
 ```
-
 Open your browser at `http://localhost:5173` (or whichever port Vite assigns).
-
----
 
 ## 🎯 How to Play
 
@@ -77,7 +74,6 @@ Open your browser at `http://localhost:5173` (or whichever port Vite assigns).
 
 ## 📁 Project Structure
 
-```
 Tic tac toe/
 ├── node_modules/
 ├── public/
@@ -96,18 +92,9 @@ Tic tac toe/
 ├── package-lock.json
 ├── README.md
 └── vite.config.js
-```
 
 ---
 
 ## 🙌 Contributing
 
 Pull requests are welcome! If you'd like to add features (AI opponent, sound effects, themes), feel free to fork and open a PR.
-
----
-
-## 📄 License
-
-This project is open source under the [MIT License](LICENSE).
-
----
