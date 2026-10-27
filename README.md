@@ -2,8 +2,6 @@
 
 A fun and interactive **two-player Tic Tac Toe** game built with **React + HTML + CSS**, where players don't just play with X and O — they play with **emojis of their choice like 🥰😎**!
 
----
-
 ## ✨ Features
 
 - **Emoji Picker** — Each player can pick an emoji from a curated set *or* type in any custom emoji they want
@@ -32,7 +30,7 @@ A fun and interactive **two-player Tic Tac Toe** game built with **React + HTML 
 ### Prerequisites
 
 - Node.js (v16+)
-- npm or yarn
+- npm 
 
 ### Installation
 
@@ -94,7 +92,6 @@ Tic tac toe/
 └── vite.config.js
 
 ---
-
 ## 🙌 Contributing
 
 Pull requests are welcome! If you'd like to add features (AI opponent, sound effects, themes), feel free to fork and open a PR.
